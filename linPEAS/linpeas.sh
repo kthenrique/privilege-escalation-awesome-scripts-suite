@@ -1193,7 +1193,7 @@ if [ "`echo $CHECKS | grep SofI`" ]; then
     printf "$ldap\n"
     echo "The password hash is from the {SSHA} to 'structural'";
     for d in $ldap; do cat "$d/*.bdb" 2>/dev/null | grep -i -a -E -o "description.*" | sort | uniq | sed "s,administrator\|password\|ADMINISTRATOR\|PASSWORD\|Password\|Administrator,${C}[1;31m&${C}[0m,g"; done
-  else echo_not_found ".vnc"
+  else echo_not_found "ldap"
   fi
   echo ""
 
